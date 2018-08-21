@@ -1,4 +1,4 @@
-package com.ylym.valuelogger;
+package com.ylym.logger;
 
 import static org.junit.Assert.assertTrue;
 
