@@ -1,14 +1,11 @@
-package com.ylym.logger;
-
-import java.util.logging.Level;
+package com.ylym.valuelogger;
 
 public class SampleApp {
   public static void main( String[] args ) {
     SampleValueClass valueObject = new SampleValueClass("string", 3);
-    ValueLogger valueLogger = new ValueLogger(valueObject);
+    Logger valueLogger = new Logger(valueObject);
     valueLogger.log();
     valueObject.stringValue = "newString";
     valueLogger.log();
-    valueLogger.log(Level.SEVERE);
   }
 }

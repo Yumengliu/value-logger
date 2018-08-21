@@ -1,39 +1,31 @@
-package com.ylym.logger;
+package com.ylym.valuelogger;
 
-import com.ylym.logger.annotation.ValueToLog;
+import com.ylym.valuelogger.annotation.ValueToLog;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.lang.reflect.Field;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 
-public class ValueLogger {
+public class Logger {
 
   private Map<String, Object> stringToObjectMap;
   private Map<String, Field> stringToFieldMap;
   private Object agentObject;
-  private static final Logger LOGGER = Logger.getLogger(ValueLogger.class.getName());
 
-  public ValueLogger(Object agentObject) {
+  public Logger(Object agentObject) {
     checkNotNull(agentObject);
     this.agentObject = agentObject;
     this.stringToObjectMap = new HashMap<>();
     this.stringToFieldMap = new HashMap<>();
     setUpBookKeepingMaps();
-    LOGGER.setLevel(Level.FINEST);
   }
 
   public void log() {
-    log(Level.INFO);
-  }
-
-  public void log(Level level) {
     updateObjectMap();
     for (Map.Entry<String, Object> entry : stringToObjectMap.entrySet()) {
-      LOGGER.log(level, String.format("%s: %s", entry.getKey(), entry.getValue().toString()));
+      System.out.println(String.format("%s: %s", entry.getKey(), entry.getValue().toString()));
     }
   }
 
