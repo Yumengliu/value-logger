@@ -1,4 +1,4 @@
-package com.ylym.valuelogger.annotation;
+package com.ylym.logger.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

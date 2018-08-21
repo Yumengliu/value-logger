@@ -1,6 +1,6 @@
-package com.ylym.valuelogger;
+package com.ylym.logger;
 
-import com.ylym.valuelogger.annotation.ValueToLog;
+import com.ylym.logger.annotation.ValueToLog;
 
 public class SampleValueClass {
 
