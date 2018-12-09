@@ -4,11 +4,11 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.ylym.valuelogger</groupId>
-  <artifactId>com.ylym.valuelogger</artifactId>
+  <groupId>com.ylym</groupId>
+  <artifactId>value-logger</artifactId>
   <version>1.0</version>
 
-  <name>com.ylym.logger</name>
+  <name>Value Logger</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
@@ -31,7 +31,6 @@
       <artifactId>guava</artifactId>
       <version>19.0</version>
     </dependency>
-
   </dependencies>
 
   <build>
