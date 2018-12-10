@@ -17,20 +17,33 @@ public class ValueLogger {
   private Object agentObject;
   private static final Logger LOGGER = Logger.getLogger(ValueLogger.class.getName());
 
-  public ValueLogger(Object agentObject) {
+  public ValueLogger(Object agentObject, Level logLevel) {
     checkNotNull(agentObject);
+    checkNotNull(logLevel);
     this.agentObject = agentObject;
     this.stringToObjectMap = new HashMap<>();
     this.stringToFieldMap = new HashMap<>();
     setUpBookKeepingMaps();
-    LOGGER.setLevel(Level.FINEST);
+    LOGGER.setLevel(logLevel);
+  }
+
+  public ValueLogger(Object agentObject) {
+    this(agentObject, Level.FINEST);
+  }
+
+  public void setLevel(Level logLevel) {
+    LOGGER.setLevel(logLevel);
   }
 
   public void log() {
-    log(Level.INFO);
+    logImpl(LOGGER.getLevel());
   }
 
   public void log(Level level) {
+    logImpl(level);
+  }
+
+  private void logImpl(Level level) {
     updateObjectMap();
     for (Map.Entry<String, Object> entry : stringToObjectMap.entrySet()) {
       LOGGER.log(level, String.format("%s: %s", entry.getKey(), entry.getValue().toString()));
