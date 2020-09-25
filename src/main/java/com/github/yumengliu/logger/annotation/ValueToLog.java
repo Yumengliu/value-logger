@@ -1,4 +1,4 @@
-package com.ylym.logger.annotation;
+package com.github.yumengliu.logger.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

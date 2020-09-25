@@ -1,6 +1,6 @@
-package com.ylym.logger;
+package com.github.yumengliu.logger;
 
-import com.ylym.logger.annotation.ValueToLog;
+import com.github.yumengliu.logger.annotation.ValueToLog;
 
 public class SampleValueClass {
 

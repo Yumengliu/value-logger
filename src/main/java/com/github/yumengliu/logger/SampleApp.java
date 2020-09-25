@@ -1,4 +1,4 @@
-package com.ylym.logger;
+package com.github.yumengliu.logger;
 
 import java.util.logging.Level;
 

@@ -1,4 +1,4 @@
-package com.ylym.logger;
+package com.github.yumengliu.logger;
 
 import static org.junit.Assert.assertTrue;
 
